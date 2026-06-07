@@ -99,7 +99,7 @@ html,body,#root {
   appearance:none;
   background:rgba(255,255,255,.04);
   border:1px solid var(--brd);
-  border-radius:6px; color:var(--t2);
+  border-radius:6px; color:var(--t1);
   font-family:var(--sans); font-size:13px; font-weight:500;
   padding:6px 26px 6px 11px; cursor:pointer; outline:none; min-width:130px;
   transition:border-color .12s;
@@ -107,6 +107,10 @@ html,body,#root {
 .sl-select:hover { border-color:rgba(255,255,255,.2); }
 .sl-select-wide { min-width:210px; }
 .sl-chevron { position:absolute; right:8px; font-size:10px; color:var(--t2); pointer-events:none; }
+.sl-select option {
+  background: #0a1525;   
+  color: #f8fafc;       
+}
 
 .ss-wrap { position:relative; }
 .ss-trigger {
