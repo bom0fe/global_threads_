@@ -97,9 +97,9 @@ html,body,#root {
 .sl-sel-wrap { position:relative; display:flex; align-items:center; }
 .sl-select {
   appearance:none;
-  background:rgba(0,0,0,.04);
+  background:rgba(255,255,255,.04);
   border:1px solid var(--brd);
-  border-radius:6px; color:var(--t1);
+  border-radius:6px; color:var(--t2);
   font-family:var(--sans); font-size:13px; font-weight:500;
   padding:6px 26px 6px 11px; cursor:pointer; outline:none; min-width:130px;
   transition:border-color .12s;
