@@ -169,6 +169,10 @@ GDELT event JSONs are expected at
 `public/data/gdelt_event_outputs_integrated/<YYYY>/<MM>/<YYYY-MM-DD>_<idx>.json`
 for the Deep Analysis view.
 
+## You Only can paste News URL in GDELT. There are some example news URLs below.
+## https://www.businessday.co.za/bd/markets/2022-02-04-oil-extends-gains-on-supply-disruption-fears/
+## https://www.ariananews.af/russia-accuses-west-of-ramping-up-pressure-with-ukraine-arms-supplies/
+
 ---
 
 ## Scripts
