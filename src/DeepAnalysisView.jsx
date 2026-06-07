@@ -518,7 +518,7 @@ export default function DeepAnalysisView({ onBack }) {
             <div className="summary-card import-card" style={{ gridColumn: "1 / -1" }}>
               <span className="summary-dir">↓ Total Import</span>
               <span className="summary-val">{(periodTotals.import / 1e6).toFixed(2)}</span>
-              <span className="summary-unit">A million kg</span>
+              <span className="summary-unit">Million kg</span>
             </div>
           </div>
           <div className="balance-row">
