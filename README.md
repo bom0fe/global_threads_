@@ -138,6 +138,23 @@ npm run build                  # outputs /build
 
 ---
 
+### News search scope
+
+The Dashboard's URL search queries event records stored in the backend MongoDB — not the open web. 
+Only events collected through the GDELT ingestion pipeline (filtered by CAMEO code, GoldsteinScale and NumSources thresholds) are searchable.
+
+To populate the collection, run the ingestion pipeline against BigQuery and load results into the `gdelt` cluster on MongoDB Atlas.
+
+## Alternative supplier scoring
+Each candidate country is scored out of 100 across four key dimensions:
+
+- Supply Capability (40%): Assesses if the country can supply the product based on their import track record, global export share, and consistency.
+- National Stability (30%): Evaluates the country's reliability using WGI political and institutional stability indices.
+- Market Accessibility (25%): Determines if the goods can efficiently reach Korea by considering FTA status and the sea distance from Busan.
+- Geographic Spread (5%): Checks if the alternative reduces geographical concentration by applying a penalty if the candidate is in the same region as the original risk country.
+
+Scores are pre-computed in alternative_scores.json. The Dashboard lets users toggle axis weights and displays an A–F grade per candidate.
+
 ## Data files
 
 Place these under `public/data/`:
