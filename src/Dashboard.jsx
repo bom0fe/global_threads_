@@ -11,10 +11,10 @@ import "./Dashboard.css";
 const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:4000/api";
 // Per-axis weights for the alternative-supplier score.
 const ALT_SCORE_COMPONENTS = [
-  { key:"supply", label:"Supply", max:40, color:"#3b82f6" },
-  { key:"stability", label:"Stability", max:30, color:"#ef4444" },
-  { key:"trade", label:"Trade", max:25, color:"#22c55e" },
-  { key:"diversify", label:"Distance Score", max:5, color:"#eab308" },
+  { key:"supply", label:"Supply Capability", max:40, color:"#3b82f6" },
+  { key:"stability", label:"National Stability", max:30, color:"#ef4444" },
+  { key:"trade", label:"Market Accessibility", max:25, color:"#22c55e" },
+  { key:"diversify", label:"Geographic Spread", max:5, color:"#eab308" },
 ];
 const ALT_GRADE_THRESHOLDS = [
   { min:80, grade:"A" },
@@ -1024,14 +1024,7 @@ export default function Dashboard({ onDeepAnalysis }) {
                         <span className="sl-sup-name">{s.name}</span>
                         <span className="sl-sup-score">{s.score}</span>
                       </div>
-                      <div className="sl-sup-meta">
-                        <span>Supply {s.supply}</span>
-                        <span>·</span>
-                        <span>Stability {s.stability}</span>
-                        <span>·</span>
-                        <span>Trade {s.trade}</span>
-                        {s.importShare > 0 && <><span>·</span><span>Distance Score {s.importShare}%</span></>}
-                      </div>
+                      
                       <div className="sl-sup-bar-bg">
                         {activeAltComponents.map(component => {
                           const value = Number(s[component.key]) || 0;
