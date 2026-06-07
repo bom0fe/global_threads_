@@ -698,11 +698,16 @@ export default function Dashboard({ onDeepAnalysis }) {
     if (!activeEvent?.month) return Math.floor(seriesData.length / 2);
     const exact = seriesData.findIndex(d => d.period === activeEvent.month);
     if (exact >= 0) return exact;
-    const evDate = activeEvent.month;
+    const toMonths = (ym) => {
+    if (!ym) return 0;
+    const [y, m] = ym.split("-").map(Number);
+      return (y || 0) * 12 + (m || 1);
+    };
+    const evNum = toMonths(activeEvent.month);
     let closestIdx = 0;
-    let minDiff = Infinity;
+    let minDiff    = Infinity;
     seriesData.forEach((d, i) => {
-      const diff = Math.abs(d.period.localeCompare(evDate));
+      const diff = Math.abs(toMonths(d.period) - evNum);
       if (diff < minDiff) { minDiff = diff; closestIdx = i; }
     });
     return closestIdx;
