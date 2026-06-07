@@ -8,7 +8,7 @@ import { useAltCandidates }  from "./supplier_chart/useAltScores";
 import { COUNTRY_GEO } from "./tradedata";
 import "./Dashboard.css";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:4000/api";
+const API_BASE = process.env.REACT_APP_API_URL || "/api";
 // Per-axis weights for the alternative-supplier score.
 const ALT_SCORE_COMPONENTS = [
   { key:"supply", label:"Supply Capability", max:40, color:"#3b82f6" },
