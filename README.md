@@ -127,7 +127,7 @@ PORT=4000
 cd backend && npm run dev      # nodemon on PORT (default 4000)
 
 # Frontend (new terminal)
-npm start                      # CRA dev server on http://localhost:3000
+npm run dev                      # CRA dev server on http://localhost:3000
 ```
 
 ### Build
@@ -170,25 +170,8 @@ GDELT event JSONs are expected at
 for the Deep Analysis view.
 
 ## You Only can paste News URL in GDELT. There are some example news URLs below.
-## https://www.businessday.co.za/bd/markets/2022-02-04-oil-extends-gains-on-supply-disruption-fears/
-## https://www.ariananews.af/russia-accuses-west-of-ramping-up-pressure-with-ukraine-arms-supplies/
-
----
-
-## Scripts
-
-```bash
-npm start       # CRA dev server
-npm run build   # production build
-npm test        # run tests with CRA test runner
-```
-
-Backend:
-
-```bash
-npm run dev     # nodemon
-npm start       # node server.js
-```
+## https://www.businesslive.co.za/bd/markets/2022-02-04-oil-extends-gains-on-supply-disruption-fears/
+## http://mignews.com/news/arabisrael/smi-irana-soobshayut-ob-atake-na-stalelitejnyj-zavod-mobarakeh-steel.html
 
 ---
 
